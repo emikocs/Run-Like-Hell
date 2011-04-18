@@ -31,18 +31,27 @@ public class KinectCameraControl : MonoBehaviour {
 		originalOrientation = transform.rotation;
 		
 		GameObject kinectContainer = GameObject.Find("Kinect");
-		
-		if(kinectContainer != null)
-			kin = kinectContainer.GetComponent<Kinect>();
-		
+
+        if (kinectContainer != null)
+        {
+            Debug.Log("Kinect Found.");
+            kin = kinectContainer.GetComponent<Kinect>();
+        }
+        else
+        {
+            Debug.Log("Kinect Not Found.");
+        }
 	}
 	
 	// Update is called once per frame
 	void Update () {
 
+        if (kin == null || kin.users.Count < 1)
+        {
+            return;
+        }
         Debug.Log("Camera control updated");
 
-		if(kin == null || kin.users.Count < 1) return;
 				
 		KinectUser kUser = kin.users[0];
 		NiteWrapper.SkeletonJointTransformation trans = kin.getTransform(kUser.ID,ControlJoint);
