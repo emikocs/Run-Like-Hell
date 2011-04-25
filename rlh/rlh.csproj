@@ -50,6 +50,8 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <None Include="Assets\Fonts\font info.txt" />
+     <None Include="Assets\Fonts\T+(ªTªdªTªT=.txt" />
      <Compile Include="Assets\Locomotion System\Editor\LocomotionEditorClass.cs" />
      <Compile Include="Assets\Locomotion System\AlignmentTracker.cs" />
      <Compile Include="Assets\Locomotion System\GhostOriginal.cs" />
@@ -122,8 +124,12 @@
      <None Include="Assets\Standard Assets (Mobile)\Shaders\Particle Shaders\Mobile Particles Additive Culled.shader" />
      <None Include="Assets\Standard Assets (Mobile)\Shaders\Vertex Colored Shaders\Mobile Transparent Vertex Color.shader" />
      <None Include="Assets\Standard Assets (Mobile)\Shaders\Vertex Colored Shaders\Mobile Vertex Colored.shader" />
+     <None Include="Assets\clockScript.js" />
      <None Include="Assets\NewBehaviourScript.js" />
      <None Include="Assets\randomstart.js" />
+ <Reference Include="depends">
+ <HintPath>Assets\Fonts\depends.dll</HintPath>
+ </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
