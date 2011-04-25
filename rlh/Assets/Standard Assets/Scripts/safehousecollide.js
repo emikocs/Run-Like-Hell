@@ -1,45 +1,20 @@
 var target : GUITexture;
 var colliding : System.Boolean;
-var pursuing : System.Boolean;
-var deathtext : GUIText;
-var chasetext : GUIText;
-//object to be followed
-var detectObject: Transform;
-//distance that will trigger following action
-var distanceDetection: float;
+var text : GUIText;
 
 function Start()
 {
     colliding = false;
-    pursuing = false;
 }
 
 function Update () {
-	if (detectObject) {
-		var dist = Vector3.Distance(detectObject.position, transform.position);
-		
-		//if distance is less than what is specified then do something
-		if(dist<distanceDetection){
-			//print("attack");
-			GetComponent(SmoothLookAt).enabled = true;
-			GetComponent(ConstantForce).enabled = true;
-			chasetext.text += "*";
-			pursuing = true;
-		}else{
-			//print("stop attack");
-			GetComponent(SmoothLookAt).enabled = false;
-			GetComponent(ConstantForce).enabled = false;
-			chasetext.text.Replace("*", "");
-			pursuing = false;
-        }
-	}
 }
 
 function OnCollisionEnter(collision : Collision) {
 	if(collision.gameObject.CompareTag("Player") && colliding == false){
         colliding = true;
-		Debug.Log("Dog collided");
-	    deathtext.text +="b";
+		Debug.Log("Made it to safe house");
+	    text.text +="~";
 		FlashWhenHit();
 		//target.color.a = 100;
 	}
@@ -65,6 +40,6 @@ function FlashWhenHit (){
     target.guiTexture.color.a = 0;
 //    Fade (0.8, 0, 0.5, target);
     
-    //yield WaitForSeconds (3);
+    yield WaitForSeconds (3);
     colliding = false;
     }
