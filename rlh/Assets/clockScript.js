@@ -61,4 +61,5 @@ function ShowTime()
 function TimeIsUp()
 {
     Debug.Log("Time is up!");
+    //Application.LoadLevel (0);
 }

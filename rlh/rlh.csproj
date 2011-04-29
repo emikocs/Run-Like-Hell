@@ -50,21 +50,6 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Fonts\Locomotion System\Editor\LocomotionEditorClass.cs" />
-     <Compile Include="Assets\Fonts\Locomotion System\AlignmentTracker.cs" />
-     <Compile Include="Assets\Fonts\Locomotion System\GhostOriginal.cs" />
-     <Compile Include="Assets\Fonts\Locomotion System\IK1JointAnalytic.cs" />
-     <Compile Include="Assets\Fonts\Locomotion System\IKSimple.cs" />
-     <Compile Include="Assets\Fonts\Locomotion System\IKSolver.cs" />
-     <Compile Include="Assets\Fonts\Locomotion System\IMotionAnalyzer.cs" />
-     <Compile Include="Assets\Fonts\Locomotion System\Interpolator.cs" />
-     <Compile Include="Assets\Fonts\Locomotion System\LegAnimator.cs" />
-     <Compile Include="Assets\Fonts\Locomotion System\LegController.cs" />
-     <Compile Include="Assets\Fonts\Locomotion System\MotionAnalyzer.cs" />
-     <Compile Include="Assets\Fonts\Locomotion System\MotionAnalyzerBackwards.cs" />
-     <Compile Include="Assets\Fonts\Locomotion System\PolarGradientBandInterpolator.cs" />
-     <Compile Include="Assets\Fonts\Locomotion System\TrajectoryVisualizer.cs" />
-     <Compile Include="Assets\Fonts\Locomotion System\Util.cs" />
      <None Include="Assets\Fonts\font info.txt" />
      <None Include="Assets\Fonts\T+(ªTªdªTªT=.txt" />
      <None Include="Assets\soldier\CharacterPusher.js" />
@@ -108,6 +93,7 @@
      <None Include="Assets\Standard Assets (Mobile)\Scripts\FollowTransform.js" />
      <None Include="Assets\Standard Assets (Mobile)\Scripts\Joystick.js" />
      <None Include="Assets\Standard Assets (Mobile)\Scripts\ObliqueNear.js" />
+     <Compile Include="Assets\Standard Assets (Mobile)\Scripts\PauseMenu.cs" />
      <None Include="Assets\Standard Assets (Mobile)\Scripts\PlayerRelativeControl.js" />
      <None Include="Assets\Standard Assets (Mobile)\Scripts\RollABall.js" />
      <None Include="Assets\Standard Assets (Mobile)\Scripts\RotationConstraint.js" />
@@ -126,6 +112,7 @@
      <None Include="Assets\Standard Assets (Mobile)\Shaders\Vertex Colored Shaders\Mobile Transparent Vertex Color.shader" />
      <None Include="Assets\Standard Assets (Mobile)\Shaders\Vertex Colored Shaders\Mobile Vertex Colored.shader" />
      <None Include="Assets\clockScript.js" />
+     <None Include="Assets\GhostTextScript.js" />
      <None Include="Assets\NewBehaviourScript.js" />
      <None Include="Assets\randomstart.js" />
  <Reference Include="depends">

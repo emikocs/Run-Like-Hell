@@ -46,7 +46,7 @@ function OnCollisionEnter(collision : Collision) {
         colliding = true;
 		Debug.Log("Dog collided");
 	    deathtext.text +="b";
-		FlashWhenHit();
+		//FlashWhenHit();
 		//target.color.a = 100;
 	}
 }
