@@ -2,7 +2,7 @@ var target : GUITexture;
 var colliding : System.Boolean;
 var pursuing : System.Boolean;
 var deathtext : GUIText;
-var chasetext : GUIText;
+var chasetext : GhostTextScript;
 //object to be followed
 var detectObject: Transform;
 //distance that will trigger following action
@@ -19,17 +19,23 @@ function Update () {
 		var dist = Vector3.Distance(detectObject.position, transform.position);
 		
 		//if distance is less than what is specified then do something
-		if(dist<distanceDetection){
+		if(dist<distanceDetection && pursuing == false){
 			//print("attack");
 			GetComponent(SmoothLookAt).enabled = true;
 			GetComponent(ConstantForce).enabled = true;
-			chasetext.text += "*";
+			audio.Play();
+			chasetext.pursuers ++;
+			chasetext.PursuerTally();
+			//chasetext.text += "*";
 			pursuing = true;
-		}else{
+		}else if (dist >= distanceDetection) {
 			//print("stop attack");
 			GetComponent(SmoothLookAt).enabled = false;
 			GetComponent(ConstantForce).enabled = false;
-			chasetext.text.Replace("*", "");
+			//chasetext.text.Replace("*", "");
+			audio.Stop();
+			chasetext.pursuers --;
+			chasetext.PursuerTally();
 			pursuing = false;
         }
 	}
@@ -57,6 +63,8 @@ target.guiTexture.color.a = end; // ensure the fade is completely finished (beca
 } //end if
 
 } //end Fade
+
+
 
 function FlashWhenHit (){
     Fade (0, 0.8, 0.5, target);
